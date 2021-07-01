@@ -61,6 +61,7 @@
 			to_chat(C, SPAN_DEBUG("<b>[prefix]</b>: [text]"))
 
 /proc/log_game(text)
+	rustg_log_write("[GLOB.log_directory]/[ROUNDLOG_GAME].log", text, "true")
 	if (config.log_game)
 		game_log("GAME", text)
 
@@ -73,22 +74,27 @@
 		game_log("ACCESS", text)
 
 /proc/log_say(text)
+	rustg_log_write("[GLOB.log_directory]/[ROUNDLOG_SAY].log", text, "true")
 	if (config.log_say)
 		game_log("SAY", text)
 
 /proc/log_ooc(text)
+	rustg_log_write("[GLOB.log_directory]/[ROUNDLOG_OOC].log", text, "true")
 	if (config.log_ooc)
 		game_log("OOC", text)
 
 /proc/log_whisper(text)
+	rustg_log_write("[GLOB.log_directory]/[ROUNDLOG_WHISPER].log", text, "true")
 	if (config.log_whisper)
 		game_log("WHISPER", text)
 
 /proc/log_emote(text)
+	rustg_log_write("[GLOB.log_directory]/[ROUNDLOG_EMOTE].log", text, "true")
 	if (config.log_emote)
 		game_log("EMOTE", text)
 
 /proc/log_attack(text)
+	rustg_log_write("[GLOB.log_directory]/[ROUNDLOG_ATTACK].log", text, "true")
 	if (config.log_attack)
 		game_log("ATTACK", text)
 

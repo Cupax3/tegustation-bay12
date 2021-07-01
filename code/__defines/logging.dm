@@ -1,0 +1,6 @@
+#define ROUNDLOG_OOC "ooc"
+#define ROUNDLOG_SAY "say"
+#define ROUNDLOG_ATTACK "attack"
+#define ROUNDLOG_GAME "game"
+#define ROUNDLOG_WHISPER "whisper"
+#define ROUNDLOG_EMOTE "emote"
